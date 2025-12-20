@@ -3,7 +3,7 @@
 Create Database and Schemas
 ================================
 
-Script Purpose:
+PURPOSE:
 This script creates a new database named 'Datawarehouse' 
 after checking if it already exists. If the database exists,
 it is dropped and recreated. Additionally, the script sets up
@@ -14,6 +14,8 @@ Running this script will drop the entire 'DataWatehouse' database if it exists.
 All data in the database will be permanently deleted. Proceed with caution and 
 ensure you have proper backups before running this script.
 
+SOURCE:
+Data with Baraa
 
 */
 
