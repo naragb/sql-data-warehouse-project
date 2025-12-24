@@ -19,4 +19,28 @@ Source:
 Data with Baraa
 
 ===========================================================================
+*/
+
+-- =======================================================================
+-- Checking 'silver.crm_cust_info'
+-- =======================================================================
+
+-- Check for NULLs of Duplicates in Primary Key 
+-- Expectation: No result
+SELECT 
+   cst_id, 
+   COUNT(*)
+FROM silver.crm_cust_info
+GROUP BY cst_id
+HAVING COUNT(*) > 1 OR cst_id IS NULL;
+
+-- Check for Unwanted spaces
+-- Expectation: No results
+SELECT 
+   cst_key
+FROM silver.crm_cust_info
+WHERE cst_key != TRIM(cst_key);
+
+
+
 
